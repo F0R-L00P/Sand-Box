@@ -1,0 +1,23 @@
+[project]
+name = "sand-box"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "accelerate>=1.15.0",
+    "bitsandbytes>=0.50.2",
+    "huggingface-hub>=2.3.0",
+    "ipykernel>=7.4.0",
+    "llm-sandbox>=0.3.46",
+    "torch>=2.14.1",
+    "transformers>=5.20.2",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
